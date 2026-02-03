@@ -28,7 +28,5 @@ jobs:
     - name: Ejecutar pruebas
       run: npm test
 
-    - name: Simular despliegue
-      run: |
-        echo "Despliegue simulado: la aplicación paso ÑLint y 
-        pruebas exitosamente."
+    - name: Build
+      run: npm ci && npm rum build
