@@ -1,26 +1,17 @@
+// 1era funcion sobre validar contraseñas
 function validarPassword(password) {
-  if (password.length < 8) {
-    return false;
-  }
-
-  const tieneMayuscula = /[A-Z]/.test(password);
-  const tieneNumero = /[0-9]/.test(password);
-
-  return tieneMayuscula || tieneNumero; 
-  // ERROR: para testear que debería ser && en lugar 
-  // de || para requerir ambos criterios
+  const regex = /^(?=.*[A-Z])(?=.*\d).{8,}$/;
+  return regex.test(password);
 }
 
+// 2da funcion sobre calcular promedios
+
 function calcularPromedio(notas) {
-  if (notas.length === 0) {
+  if (!Array.isArray(notas) || notas.length === 0) {
     return 0;
   }
 
-  let suma = 0;
-  for (let i = 0; i < notas.length; i++) {
-    suma += notas[i];
-  }
-
+  const suma = notas.reduce((acc, n) => acc + n, 0);
   return suma / notas.length;
 }
 
