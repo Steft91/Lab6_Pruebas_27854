@@ -1,4 +1,4 @@
-import { validarPassword, calcularPromedio } from './math.js';
+const {validarPassword, calcularPromedio} = require('./math');
 
 describe('validarPassword', () => {
   test('password válida', () => {

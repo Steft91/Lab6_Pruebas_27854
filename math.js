@@ -1,5 +1,5 @@
 // 1era funcion sobre validar contraseñas
-export function validarPassword(password) {
+function validarPassword(password) {
   if (password.length < 8) {
     return false;
   }
@@ -12,7 +12,7 @@ export function validarPassword(password) {
 
 
 // 2da funcion sobre calcular promedios
-export function calcularPromedio(notas) {
+function calcularPromedio(notas) {
   if (notas.length === 0) {
     return 0;
   }
@@ -24,3 +24,5 @@ export function calcularPromedio(notas) {
 
   return suma / notas.length;
 }
+
+module.exports = { validarPassword, calcularPromedio };
