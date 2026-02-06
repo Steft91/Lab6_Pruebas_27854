@@ -1,4 +1,3 @@
-// 1era funcion sobre validar contraseñas
 function validarPassword(password) {
   if (password.length < 8) {
     return false;
@@ -7,11 +6,11 @@ function validarPassword(password) {
   const tieneMayuscula = /[A-Z]/.test(password);
   const tieneNumero = /[0-9]/.test(password);
 
-  return tieneMayuscula && tieneNumero;
+  return tieneMayuscula || tieneNumero; 
+  // ERROR: para testear que debería ser && en lugar 
+  // de || para requerir ambos criterios
 }
 
-
-// 2da funcion sobre calcular promedios
 function calcularPromedio(notas) {
   if (notas.length === 0) {
     return 0;
